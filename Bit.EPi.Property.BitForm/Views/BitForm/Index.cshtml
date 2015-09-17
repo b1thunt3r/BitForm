@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>BitForm</title>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            overflow: hidden;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            color: #131313;
+            font-size: 13px;
+        }
+
+        body > div > div#loader > img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -16px;
+            margin-top: -16px;
+        }
+
+        .dijitButtonText > i.fa {
+            margin-bottom: 1px;
+        }
+
+        :focus {
+            outline: none;
+        }
+    </style>
+    <script>
+        var bitRoot = '/Static',
+                dojoConfig = {
+                    async: true,
+                    parseOnLoad: true,
+                    packages: [{
+                        name: "bitform",
+                        // TODO: location: '/bit/Embedded/Static/js'
+                        location: bitRoot + '/js'
+                    }],
+                    tplPath: bitRoot + '/Templates',
+                    imgPath: bitRoot + '/img'
+                }
+    </script>
+    <script src='//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js'></script>
+    <script>
+        require([
+            'bitform/App'
+        ], function (App) {
+            new App({}, "bitform");
+        });
+    </script>
+</head>
+<body class="tundra">
+<div data-dojo-type="bitform/Widgets/Layout">
+    <div id="loader">
+        <!--TODO: location-->
+        <img src="/Static/img/ajax-loader.gif">
+    </div>
+</div>
+</body>
+</html>
+
+@using EPiServer.Shell;
+@{
+Layout = null;
+}

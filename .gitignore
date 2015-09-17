@@ -183,3 +183,6 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 #Custom for project
+[Aa]pp_[Dd]ata/
+/Bit.EPi.Property.BitForm1
+modules

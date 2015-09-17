@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.css">-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/Static/css/styles.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--<script type="text/javascript"-->
+    <!--src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3\.4/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="/Static/js/main.js"></script>
+    <title>BitForm</title>
+</head>
+<body aria-hidden="true" role="application">
+
+<ul class="dropdown-menu" id="contextMenu">
+    <li id="new-folder" class="notForDoc">
+        <a href="javascript:void(0);">New Folder</a>
+    </li>
+    <li id="new-form" class="notForDoc">
+        <a href="javascript:void(0);">New Form</a>
+    </li>
+    <li class="divider notForRoot notForDoc" id="f-divide"></li>
+    <li id="f-rename" class="notForRoot notForDoc">
+        <a href="javascript:void(0);">Rename</a>
+    </li>
+    <li id="f-delete" class="notForRoot">
+        <a href="javascript:void(0);">Delete</a>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="col-xs-3 sidebar" id="tree-container">
+        <ul class="list-unstyled"></ul>
+    </div>
+    <div class="col-xs-9 main">
+        <nav class="navbar navbar-default">
+            <div>
+                <button type="button" class="btn btn-default btn-sm">
+                    <img src="/Static/img/textfield.png">
+                    <span>Text</span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm">
+                    <img src="/Static/img/checkbox.png">
+                    <span>Checkbox</span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm">
+                    <img src="/Static/img/radiobutton.png">
+                    <span>Radio Button</span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm">
+                    <img src="/Static/img/select.png">
+                    <span>Dropdown</span>
+                </button>
+            </div>
+        </nav>
+
+        <div id="main">
+            <div class="panel panel-default">
+                <div class="panel-heading"><label><i class="fa fa-plus"></i><span>Form Properties</span></label></div>
+                <div class="panel-body" style="display: none">
+                    <label for="formName">Form Name</label>
+                    <input id="formName">
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading"><label><i class="fa fa-plus"></i><span>Form Properties</span></label></div>
+                <div class="panel-body" style="display: none">
+                    <label for="formName">Form Name</label>
+                    <input id="formName">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-fixed-bottom navbar-inverse">
+    <div class="container">
+        <div>
+            <p class="navbar-right">
+                <button type="button" class="btn btn-primary navbar-btn btn-sm" disabled><i class="fa fa-check"></i>
+                    Select
+                </button>
+                <button type="button" class="btn btn-danger navbar-btn btn-sm"><i class="fa fa-trash"></i> No Form
+                </button>
+                <button type="button" class="btn btn-default navbar-btn btn-sm"><i class="fa fa-times"></i> Cancel
+                </button>
+            </p>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
+
+@{
+Layout = null;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+  <link rel="stylesheet" href="/Static/css/styles.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Static/js/main.js"></script>
+  <title>BitForm</title>
+</head>
+<body>
+
+
+<ul class="dropdown-menu" role="menu" id="contextMenu">
+  <li role="presentation" id="new-folder">
+    <a role="menuitem" tabindex="-1" href="#">New Folder</a>
+  </li>
+  <li role="presentation" id="new-form">
+    <a role="menuitem" tabindex="-1" href="#">New Form</a>
+  </li>
+  <li role="presentation" class="divider" id="f-divide"></li>
+  <li role="presentation" id="f-rename">
+    <a role="menuitem" tabindex="-1" href="#">Rename</a>
+  </li>
+  <li role="presentation" id="f-delete">
+    <a role="menuitem" tabindex="-1" href="#">Delete</a>
+  </li>
+</ul>
+
+<div class="container">
+
+  <div class="col-xs-3 sidebar">
+    <ul class="list-unstyled">
+      <li>
+        <label class="tree-toggle tree-root"><i class="fa fa-server"></i> Root</label>
+        <ul class="list-unstyled tree">
+          <li>
+            <label class="tree-toggle"><i class="fa fa-folder"></i> Test 2</label>
+            <ul class="list-unstyled tree tree-collapsed">
+              <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+              <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+              <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+            </ul>
+          </li>
+          <li>
+            <label class="tree-toggle"><i class="fa fa-folder"></i> Test 2</label>
+            <ul class="list-unstyled tree tree-collapsed">
+              <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+              <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+              <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+              <li>
+                <label class="tree-toggle"><i class="fa fa-folder"></i> Test 2</label>
+                <ul class="list-unstyled tree tree-collapsed">
+                  <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                  <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                  <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                  <li>
+                    <label class="tree-toggle"><i class="fa fa-folder"></i> Test 2</label>
+                    <ul class="list-unstyled tree tree-collapsed">
+                      <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                      <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                      <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                      <li>
+                        <label class="tree-toggle"><i class="fa fa-folder"></i> Test 2</label>
+                        <ul class="list-unstyled tree tree-collapsed">
+                          <li><span class="tree-item tree-selected"><i class="fa fa-file-o"></i> Test Test Tewsrt</span></li>
+                          <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                          <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="tree-item tree-selected"><i class="fa fa-file-o"></i> Test</span></li>
+          <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+          <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+          <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+          <li><span class="tree-item"><i class="fa fa-file-o"></i> Test</span></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-9 main">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-default btn-sm button button-text">Text</button>
+        <button type="button" class="btn btn-default btn-sm button button-check">Checkbox</button>
+        <button type="button" class="btn btn-default btn-sm button button-radio">Radio Button</button>
+        <button type="button" class="btn btn-default btn-sm button button-select">Dropdown</button>
+      </div>
+      <div class="panel-body">
+        <div class="panel panel-default">
+          <div class="panel-heading"><label>Form Properties</label></div>
+          <div class="panel-body">
+            <label>Form Name</label>
+            <input>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<nav class="navbar navbar-fixed-bottom navbar-inverse">
+  <div class="container">
+    <div>
+      <p class="navbar-right">
+        <button type="button" class="btn btn-primary navbar-btn btn-sm"><i class="fa fa-check"></i> Select</button>
+        <button type="button" class="btn btn-danger navbar-btn btn-sm"><i class="fa fa-trash"></i> No Form</button>
+        <button type="button" class="btn btn-default navbar-btn btn-sm"><i class="fa fa-times"></i> Cancel</button>
+      </p>
+    </div>
+  </div>
+</nav>
+</body>
+</html>
